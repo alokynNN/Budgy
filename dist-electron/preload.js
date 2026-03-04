@@ -1,0 +1,1 @@
+"use strict";const e=require("electron");e.contextBridge.exposeInMainWorld("electron",{minimize:()=>e.ipcRenderer.send("window-minimize"),maximize:()=>e.ipcRenderer.send("window-maximize"),close:()=>e.ipcRenderer.send("window-close"),saveData:i=>e.ipcRenderer.invoke("save-data",i),loadData:()=>e.ipcRenderer.invoke("load-data")});
